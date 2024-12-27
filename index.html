@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Vinod Kumar Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Vinod Kumar</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+			  <!-- <li class="nav-item"><a href="#travel-section" class="nav-link"><span>Travel Blog</span></a></li> -->
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+		  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	      				<div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/5.png);">
+	          	 <div class="overlay"></div>
+	          	</div>
+							
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Vinod Kumar</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'I like...       ',	
+						'Technology...   ',
+						'Teaching...     ',
+						'Travelling...   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h4>Fullbright PhD Fellow | Materials Engineer</h4>
+						<h6 class="d-flex" style="margin-bottom: 0"> Experienced in Research, Teaching and Designing.</h6>
+						<br>
+						<br>
+						<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+						  <li class="ftco-animate normal-txt">Reach me</li>
+						  <li class="ftco-animate"><a href="mailto:engr.vinodk@gmail.com"><span class="icon-paper-plane"></span></a></li>
+						  <li class="ftco-animate"><a href="https://www.linkedin.com/in/vkr93/"><span class="icon-linkedin"></span></a></li>  
+						  <li class="ftco-animate"><a href="https://twitter.com/engrvinodk"><span class="icon-twitter"></span></a></li>
+						  <li class="ftco-animate"><a href="https://facebook.com/vkr91"><span class="icon-facebook"></span></a></li>
+						  <li class="ftco-animate"><a href="https://scholar.google.com/citations?user=iCQ1b-MAAAAJ&hl=en&authuser=1"><span class="icon-google"></span></a></li>
+						</ul>
+					<br>
+			            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+		</div>
+	</div>
+    </section>
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-8 col-md-7">
+									  <div class="about-img">
+										<img src="images/6.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <!-- <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Vinod Kumar</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Graduate Research Assistant</span></p>
+										<p><span class="title-s">Employer: </span> <span>Rice University</span></p>
+										<p><span class="title-s">Address: </span> <span>Houston, Texas</span></p>
+									  </div> -->
+									</div>
+								  </div>
+								<div><p> <h4>       </h4></p></div>
+								
+								<div class="skill-mf">
+									<p class="title-s"><strong>Highlights</strong></p>
+									<span>Materials Research</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Nanotechnology</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Advanced Material Characterizations</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Electrochemistry</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Techinical Writing and Reporting</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+								<p> 
+									<p><h6><strong>Quick Links:</strong></h6></p> 
+									<a href="https://scholar.google.com/citations?user=iCQ1b-MAAAAJ&hl=en&authuser=1" class="btn btn-primary py-3 px-4">Google scholar</a> 
+									<a href="https://github.com/vkr93" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+									<p> <a href="Awards/Skills.html" class="btn btn-white btn-outline-white py-3 px-4">Skills</a>
+										<a href="Awards/Leadership Roles.html" class="btn btn-primary py-3 px-4">Leadership Roles</a> </p>
+										<p><a href="Awards/Awards.html" class="btn btn-primary py-3 px-4">Awards</a>
+											<a href="Projects/Projects.html" class="btn btn-white btn-outline-white py-3 px-4">Research Projects</a></p>
+											<a href="https://drive.google.com/file/d/1SWcz7FqRnvL7LhsllFjhDcm3pdiLEuqh/view" class="btn btn-white btn-outline-white py-3 px-4">Resume</a>
+											<a href="resume/Resume.html" class="btn btn-primary py-3 px-4">Other Experiences</a></p>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>I am a, first-gen, <a href="https://www.facebook.com/share/1AmcjDttBw/">Fulbright Funded Ph.D. Student</a> in the <a href="https://msne.rice.edu/"> Department of Materials Science and Nanoengineering </a> at <a href="https://rice.edu/"> Rice University. </a> As a member of of <a href="https://n3lab.rice.edu/">the Nanomaterials, Nanomechanics and Nanodevices Lab (N3L)</a> supervised by <a href="https://profiles.rice.edu/faculty/jun-lou"> Prof. Jun Lou </a>, My research focuses on <strong>Sustainable Fuels and Clean Chemcials, with expertise on Electro/photcatalysis, Advanced Materials Synthesis and Characterizations</strong>. 
+								<div>
+									Previously, I worked as a Lecturer in <a href="https://mme.duet.edu.pk/">Dept. of Metallurgy and Materials Engineering</a> at <a href="https://duet.edu.pk/">Dawood Unviersity of Engineering and Technology (DUET)</a> Karachi, Pakistan. <strong>I designed and taught undergraduate courses, mentored 5+ senior-year design projects, faculty advisor to student-run chapter and contributed in departmental advancements</strong>.
+								</div>
+								<div>
+									I earned my Masters in <a href="https://mt.muet.edu.pk/">Metallurgy and Materials Engineering</a> from <a href="https://muet.edu.pk/">Mehran University of Engineering and Technology</a> Jamshoro. AT MUET, My research was focused on developing novel <a href="https://www.pjps.pk/uploads/pdfs/33/5/Paper-21.pdf"> graphene based nanocomposite</a> for antibacterial applications, During my masters, I also served as a Graduate Intern at MME, MUET under National Internsip Program. I learnt advanced tools and co-supversied two undergrad research projects.
+								</div>
+								<div
+								>My industry experience includes working as a Trainee Engineer at a leading Cable Manufacturing Company, where I gained hands-on-expertise  in melting, casting and quality control. Back in 2019, I joined  <a href="https://duet.edu.pk/">DUET</a>, as a Lab-Engineer and got promoted as Lecturer due to academic excellence and laboratory expertise.
+								</div>
+								<div>
+								In my free time, I enjoy exploring the worl through the eyes of my toddler, diving into thought-provoking reads, and watch TV series. I like to stay updated about world politics & technological advancements, through twitter. </p>
+								</div>
+								<span><strong>Key Achievements:</strong></span>
+									<ul>
+										<li> Recipient of Prestigious <a href="https://www.facebook.com/share/1AmcjDttBw/">Fulbright Scholarship</a> for PhD, awarded to less than 1% of applicants globally.</li>
+										<li> Contributed in 4+ peer-reviewed <a href="https://scholar.google.com/citations?user=iCQ1b-MAAAAJ&hl=en&authuser=1">publications</a>.</li>	
+										<li> Got Undergrad and Masters degrees with Distinctions.</li>
+										<li> Presented my work in National/International Conferences.</li>
+										<li> Experience of teaching (mentoring) undergrad/High School students.</li>
+									</ul>
+									<!-- <ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Materials Science and Engineering </span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Advanced Materials Synthesis and Characerization, Electro/Photocatalysis, Nanocomposites, Coatings, Nanomechanics </span></li>
+									<li class="d-flex"><span>Education:</span> <span>PhD in Materials Science and Nanoengineering (ongoing)</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English,Urdu, Sindhi, Dhatki </span></li>
+									<li class="d-flex"><span>Tools:</span> <span>SEM/EDS, TEM, XPS, XRD, FT-IR, UV-VIS/DRS, Zeta Sizer/Potential, NMR &amp; Electrochemistry</span></li>
+									<li class="d-flex"><span>Software Skills:</span> <span>Python, Microsoft Office suit, Origin, Highscore, Avantage, Adobe Photoshop &amp; MATLAB</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Technology, Teaching and Travelling</span></li>
+									
+								</ul> -->
+							</div>
+						</div>
+						<!-- <div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span>&nbsp; Contributed in projects: </span>
+									<span class="number" data-number="10">0</span> <span>+</span>
+								<a href="Projects/Projects.html" class="btn btn-primary py-3 px-3">Projects</a>
+							</div>
+						</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+	
+
+
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p> Passionate Materials Researcher, currently PhD student, with over 5+ of experience in Advanced Materials Synthesis and Characterization. Dedicated to understanding the property-behavior relationship of materials to drive innovation and advancements in energy and materials science..</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Aug-2022-Present</span>
+						<h4>Graduate Research Assistant</h4>
+						<span class="position">Lou Lab | MSNE, <a href="rice.edu">Rice University </span>
+						<p class="mt-4"></a> 
+						<ul>
+										<h5>My current research focus on engineering 2D materials </h5>
+										<li>Modifying the 2D materials by doping, strain engineering or Heterostructures</li>
+										<li>Characterizing the prepared materials using advanced tools SEM/EDS, XPS, XRD, BET, TGA, PL, TEM and UPS.</li>
+										<li>Application study of prepared materials - for clean and Sustainable fuesl; Electrocatalysis, Photocatalysis</li>
+										<li>Studying the products using NMR/GC and Calorimetric methods.</li>
+										<li>List of ongoing research projects <a href='Projects/Projects.html'>here</a></li>
+							</ul></p>
+					</div>
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">June 2024 - Aug 2024</span>
+						<h4>Instructor Carbon Project</h4>
+						<span class="position">Tapia Camps | <a href="rice.edu">Rice University</a> </span>
+						<p class="mt-4">Tapia Camps are renowned summer STEM Camps organzied by DEI Center Rice</p>  
+							<ul>
+								<li>Teaching a course focused on Climate Change – Carbon Capture & Sequestration.</li>
+								<li>Demonstrating the CCS process in the lab and making students build a reservoir model to understand the CO2 storage	mechanism.</li>
+								<li>Teaching about STEM communications and Poster presentation – preparing for a competition.</li>
+							</ul>
+					</p>
+					</div>
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Feb 2022 - Aug 2022</span>
+						<h2>Lecturer</h2>
+						<span class="position">Dept. of Metallurgy and Materials Engineering (MME)</span>
+						<p class="mt-4">Dept. of MME at <a href="https://duet.edu.pk/">Dawood University of Engineering and Technology (DUET) Karachi.</a> 
+							<ul>
+								<li>Teaching undergrad courses – Polymer and Composite Materials, Mechanics of Materials, Ceramics and Glass Materials.</li>
+								<li>Helping students with senior-year design projects focusing on nanomaterials.</li>
+								<li>Managing the laboratory of Advanced Materials Characterization </li>
+							</ul>
+					</p>
+					</div>
+				</div>	
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Mar 2019 - Feb 2022</span>
+						<h2>Lab Engineer</h2>
+						<span class="position">Dept. of Metallurgy and Materials Engineering (MME)</span>
+						<p class="mt-4">Dept. of MME at <a href="https://duet.edu.pk/">Dawood University of Engineering and Technology (DUET) Karachi.</a> 
+							<ul>
+								<li>Proficiently operated, demonstrated, and maintained a wide range of general lab equipment for Material Synthesis and Characterization, 
+									including SEM/EDS, Particle Sizer, Centrifuges, UTM, Hardness tester, Optical Emission Spectroscopy, Optical Microscopy, NDT tools, 
+									etc.</li>
+								<li>Utilized a solid grasp of the experimental process to effectively design, execute, and analyze experiments. This ensured that experiments 
+									were well-organized, yielded accurate results, and were completed within the specified timeframes.</li>
+							</ul>
+						</p>
+					</div>
+				</div>
+			<div class="row" 
+			<span class="Date"> <h4> Click for other <a href='resume/Resume.html'> Experiences/Internships </span></a></h4>
+			</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022-2027 (expected)</span>
+    					<h5>Doctor of Philosophy (PhD) - Fulbright scholar</h5>
+    					<span class="position">Rice Univeristy | Houston, TX, USA</span>
+    					<p class="mt-4">CGPA: 3.6/4</p>
+						<p class="mt-md-3">Courses: Microscopy Methods, Crystallography, Materials Thermodynamics, Mechanics of Materials, and Nanomaterials for Energy Transition</p>
+    				</div>
+				</div>
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2016-2019</span>
+    					<h2>Masters of Engineering</h2>
+    					<span class="position">Mehran University of Engineering and Technology | Jamshoro, Sindh, pk</span>
+    					<p class="mt-4">CGPA: 4.0/4.0</p>
+						<p class="mt-md-3">Thesis:Fabrication and Characterization of Graphene Oxide (GO) Nanoparticles Incorporated in Poly (Vinyl Alcohol) 
+							Electrospun Nanofibers & Its Crosslinking for Medical Applications</p>
+    				</div>
+				</div>
+				<!-- <div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2012-2016</span>
+    					<h2>Bachelor of Engineering</h2>
+    					<span class="position">Mehran University of Engineering and Technology | Jamshoro, Sindh, pk</span>
+    					<p class="mt-4">CGPA: 3.7/4.0 (Ranked 2nd in Class).</p>
+						<p class="mt-md-3">Thesis: Synthesis and Characerization of Graphene Oxide</p>
+    				</div>
+    			</div>
+
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2009-2011</span>
+    					<h2>Higher Secondary School</h2>
+    					<span class="position">Govt. Degree College| Umerkot, Sind, PK</span>
+    					<p class="mt-4">Grade: A -(First Class)</p>
+						<p class="mt-md-3">Focus: Pre-Engineering</p>
+    				</div>
+				</div> -->
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="https://drive.google.com/file/d/1SWcz7FqRnvL7LhsllFjhDcm3pdiLEuqh/view?usp=sharing" class="btn btn-primary py-4 px-5">Download CV</a> </p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+       <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Here are some of the Research Projects I have been part of</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://www.pjps.pk/uploads/pdfs/33/5/Paper-21.pdf" class="block-20 zoom-effect" style="background-image: url('images/pj_1.PNG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h4 class="heading"><a href="https://www.pjps.pk/uploads/pdfs/33/5/Paper-21.pdf">PVA/GO Nanocomposites for Medical Applications</a></h4>
+                <p>Synthesized the Graphene Oxide/PVA nanocomposite membranes using Electrospinning Method; cross-linked it using vapour to make it hydrophobic and tested its antibacterial acitivty.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://link.springer.com/article/10.1007/s13399-022-02474-5" class="block-20 zoom-effect" style="background-image: url('images/pj_2.PNG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://link.springer.com/article/10.1007/s13399-022-02474-5">NiO/Graphene Nanocomposites for Microbial Fuel cell</a></h3>
+                <p>Contributed in preparing the NiO/GO nanocomposite material and charactarizations</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://web.p.ebscohost.com/ehost/pdfviewer/pdfviewer?vid=1&sid=8d1b7d99-dfbf-41d3-9d12-b0003bd458d5%40redis" class="block-20 zoom-effect" style="background-image: url('images/pj_3.PNG');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h6 class="heading"><a href="https://web.p.ebscohost.com/ehost/pdfviewer/pdfviewer?vid=1&sid=8d1b7d99-dfbf-41d3-9d12-b0003bd458d5%40redis">Schematic Synthesis of Co3O4 supported  (CoS) composite for OER</a></h6>
+                <p>Contributed in Materials Synthesis and Electrochemistry</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://www.sciencedirect.com/science/article/pii/S0360319923007802#abs0020" class="block-20 zoom-effect" style="background-image: url('images/pj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://www.sciencedirect.com/science/article/pii/S0360319923007802#abs0020">Bifunctional Elctrocatalyst PdO/Co2FeO4 for HER/OER</a></h3>
+				  <p>Sucessful synthesis of Co2FeO4@PdO which showed effective bifunctional applicability to the key processes in electrochemical water splitting reactions such as HER and OER.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://www.sciencedirect.com/science/article/abs/pii/S2589234723002725" class="block-20 zoom-effect" style="background-image: url('images/pj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rishabhnmishra/customer_segmentation/blob/main/Customer_Segmentation-final.ipynb">MXene based nanocomposite for hydrogen evolution reaction in alkaline media</a></h3>
+				  <p>Succesfully developed CoS2@Ti3C2Tx novel composite for HER in alkaline media.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://www.v3.pjsir.org/index.php/physical-sciences/article/view/579/388" class="block-20 zoom-effect" style="background-image: url('images/pj_6.PNG');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://www.v3.pjsir.org/index.php/physical-sciences/article/view/579/388">Thermomechanical Treatment of ASTM A615/A615MGrade-60 Steel Reinforcement Bars</a></h3>
+				  <p>This study was aimed to study the effect of Thermomechanical Treatment on Microstructureand Mechanical Properties of ASTM A615/A615MGrade-60 Steel Reinforcement Bars</p>
+				</div>
+			  </div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-12 ftco-animate text-center">
+					<h2>Check more work: <a href="Projects/Projects.html" class="btn btn-primary py-3 px-5">Other Projects</a> </h2>
+				</div>
+			</div>
+		</div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Awards & Scholarships</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5">0</strong>
+                <span>Conferences & workshops</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="10">0</strong>
+                <span> Leadership Roles &amp;  Community Service</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_2.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More details on<span> LinkedIn  </span> </h2>
+						<div class="heading"> <h4> I like to explore science &amp; nature. </h4>
+						<br>
+						<p><a href="https://www.linkedin.com/in/vkr93/" class="btn btn-primary py-3 px-5">LinkedIn</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+<!-- <section class="ftco-section travel-section ftco-no-pb" id="travel-section">
+
+	<div>Travel blog: "Under process"</div>
+</section> -->
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Feel Free to Reach out</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Houston, Texas</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+ 1 000-000-0000</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">vk28@rice.edu</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="https://drive.google.com/file/d/1SWcz7FqRnvL7LhsllFjhDcm3pdiLEuqh/view?usp=drive_link">resume link</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/rkGs9fD5XDKcf9h88" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find me on  </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/vkr93/"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://twitter.com/engrvinodk"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://facebook.com/vkr91"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://scholar.google.com/citations?user=iCQ1b-MAAAAJ&hl=en&authuser=1"><span class="icon-google"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
